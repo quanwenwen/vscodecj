@@ -1,0 +1,23 @@
+{
+  "name": "vscode-intelephense-server",
+  "description": "PHP Language Server",
+  "version": "0.8.4",
+  "author": "Ben Mewburn <ben@mewburn.id.au>",
+  "license": "ISC",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "intelephense": "^0.8.4",
+    "vscode-languageserver": "^4.0.0-next.1"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.52",
+    "typescript": "^2.5.3"
+  },
+  "scripts": {
+    "compile": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc -p .",
+    "watch": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc --watch -p ."
+  },
+  "private": true
+}
